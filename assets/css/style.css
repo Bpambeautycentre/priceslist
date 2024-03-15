@@ -5,6 +5,7 @@ body {
   background-position: center;
   background-repeat: repeat-y;
   background-size: contain;
+  overflow-x: hidden;
 }
 
 
@@ -163,12 +164,28 @@ section {
   display: flex;
   justify-content: space-between;
   position: relative;
-  padding-right: 10px;
   position: relative;
   z-index: 3;
   font-weight: 700;
   color: #eb75b9;
+  word-wrap: break-word;
  
+}
+
+.long{
+  margin-right: 10px;
+}
+
+.long2 {
+  white-space: nowrap;
+  display: inline-block;
+  width: 100%;
+}
+
+@media only screen and (max-width: 320px) {
+  .long2 {
+    font-size: 12px; /* Adjusted font size for smaller screens */
+  }
 }
 
 .menu .menu-content::after {
@@ -184,8 +201,9 @@ section {
 .menu .menu-content span {
   position: relative;
   z-index: 3;
-  padding: 0 10px;
   font-weight: 600;
+  text-align: end;
+  
 }
 
 .menu .menu-ingredients {
@@ -195,6 +213,7 @@ section {
   font-weight: bold;
   text-transform: uppercase;
 }
+
 
 
 .sub {
